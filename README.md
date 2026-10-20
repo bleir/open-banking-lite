@@ -6,7 +6,7 @@ Public, fictional retail-banking frontend. It shows how a client area behind log
 
 A retail bank’s signed-in experience is several products living in one window: accounts, payments, cards. Teams want to ship those products on their own schedule without rebuilding the whole site.
 
-This repo is a reference for that shape. The shell owns the frame the customer sees (header, navigation, where a section appears). Each product is a microfrontend the shell loads at runtime. Later pieces — a shared design system, a NestJS backend-for-frontend, and a public marketing site — sit around that core. They are not in the workspace yet.
+This repo is a reference for that shape. The shell owns the frame the customer sees (header, navigation, where a section appears). Each product is a microfrontend the shell loads at runtime. Shared color, type, and spacing live in `@open-banking-lite/ui`. A NestJS backend-for-frontend and a public marketing site come later.
 
 ## Architecture
 
@@ -24,6 +24,7 @@ flowchart LR
 - `apps/shell` is the consumer. It renders the “Open Banking Lite” header and asks the federation runtime for `accounts/App`. The list of remotes lives in `apps/shell/src/mf.ts`, so adding another section is a runtime registration, not a rebuild of every app.
 - `apps/accounts` is the provider. Its Vite config exposes `./App` as `remoteEntry.js`. The same app also opens on its own, which is how that team would develop the section without the shell.
 - React and React DOM are shared singletons, so the shell and the remote use one copy.
+- `libs/ui` (`@open-banking-lite/ui`) holds the design tokens. Both apps import `tokens.css`, so a color or spacing change starts in one file. Components built on those tokens come next.
 
 Nx only runs the tasks. Module Federation (`@module-federation/vite`) is what connects the apps. `nx serve accounts` starts the provider and the shell together, because the accounts serve target depends on the shell.
 
@@ -39,7 +40,7 @@ Three fictional accounts: name, number, and balance. The list is static data ins
 ## What comes later
 
 - More providers for other client-area sections, registered the same way as accounts.
-- A design-system library both apps import, so shared UI is a package rather than a copy.
+- Components in `@open-banking-lite/ui`, built on the tokens already in that package.
 - A NestJS backend-for-frontend that serves the mock API the microfrontends call.
 - A separate public marketing site in Next.js. That surface is anonymous and benefits from server rendering; the signed-in panel stays on Vite.
 

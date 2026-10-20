@@ -49,6 +49,73 @@ importers:
         specifier: ^8.0.13
         version: 8.3.4(yaml@2.9.0)
 
+  apps/accounts:
+    dependencies:
+      '@open-banking-lite/ui':
+        specifier: workspace:*
+        version: link:../../libs/ui
+      react:
+        specifier: ^19.0.0
+        version: 19.3.1
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@module-federation/vite':
+        specifier: ^1.15.5
+        version: 1.23.5(typescript@6.0.3)(vite@8.3.4(yaml@2.9.0))
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.3.0
+      '@types/react-dom':
+        specifier: ^19.0.0
+        version: 19.3.0(@types/react@19.3.0)
+      '@vitejs/plugin-react':
+        specifier: ^6.0.2
+        version: 6.1.2(vite@8.3.4(yaml@2.9.0))
+      typescript:
+        specifier: ~6.0.3
+        version: 6.0.3
+      vite:
+        specifier: ^8.0.13
+        version: 8.3.4(yaml@2.9.0)
+
+  apps/shell:
+    dependencies:
+      '@module-federation/runtime':
+        specifier: ^2.4.0
+        version: 2.9.2
+      '@open-banking-lite/ui':
+        specifier: workspace:*
+        version: link:../../libs/ui
+      react:
+        specifier: ^19.0.0
+        version: 19.3.1
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@module-federation/vite':
+        specifier: ^1.15.5
+        version: 1.23.5(typescript@6.0.3)(vite@8.3.4(yaml@2.9.0))
+      '@types/react':
+        specifier: ^19.0.0
+        version: 19.3.0
+      '@types/react-dom':
+        specifier: ^19.0.0
+        version: 19.3.0(@types/react@19.3.0)
+      '@vitejs/plugin-react':
+        specifier: ^6.0.2
+        version: 6.1.2(vite@8.3.4(yaml@2.9.0))
+      typescript:
+        specifier: ~6.0.3
+        version: 6.0.3
+      vite:
+        specifier: ^8.0.13
+        version: 8.3.4(yaml@2.9.0)
+
+  libs/ui: {}
+
 packages:
 
   '@babel/code-frame@7.29.7':

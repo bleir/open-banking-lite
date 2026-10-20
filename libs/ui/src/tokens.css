@@ -1,0 +1,22 @@
+:root {
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.5rem;
+  --font-weight-semibold: 650;
+
+  --color-text: #1a1a1a;
+  --color-text-muted: #5c6770;
+  --color-text-inverse: #ffffff;
+  --color-bg: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-border: #e2e6ea;
+  --color-brand: #0f2744;
+
+  --space-1: 4px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+
+  --radius-md: 8px;
+}
