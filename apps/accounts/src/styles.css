@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #1a1a1a;
+  background: #f4f6f8;
+}
+
+.accounts {
+  max-width: 640px;
+  padding: 24px;
+}
+
+.accounts h1 {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+}
+
+.accounts-note {
+  margin: 0 0 16px;
+  color: #5c6770;
+  font-size: 0.875rem;
+}
+
+.accounts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.accounts-list li {
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e2e6ea;
+  border-radius: 8px;
+}
+
+.accounts-name {
+  font-weight: 650;
+}
+
+.accounts-number {
+  color: #5c6770;
+  font-variant-numeric: tabular-nums;
+}
+
+.accounts-balance {
+  font-variant-numeric: tabular-nums;
+}

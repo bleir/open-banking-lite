@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #1a1a1a;
+  background: #f4f6f8;
+}
+
+.shell-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: #0f2744;
+  color: #fff;
+}
+
+.shell-brand {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 650;
+}
+
+.shell-nav-current {
+  font-size: 0.875rem;
+}
+
+.shell-main {
+  padding: 0;
+}

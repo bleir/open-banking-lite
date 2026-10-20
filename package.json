@@ -1,0 +1,24 @@
+{
+  "name": "@open-banking-lite/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "devDependencies": {
+    "@module-federation/vite": "^1.15.5",
+    "@nx/js": "23.3.0",
+    "@nx/react": "23.3.0",
+    "@nx/workspace": "23.3.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.2",
+    "nx": "23.3.0",
+    "typescript": "~6.0.3",
+    "vite": "^8.0.13"
+  },
+  "dependencies": {
+    "@module-federation/runtime": "^2.4.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
